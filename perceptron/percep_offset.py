@@ -22,9 +22,9 @@ misclassified = True
 k = 0
 while (misclassified):
     misclassified = False
-    shuffler = np.random.permutation(len(X))
-    Y = Y[shuffler]
-    X = X[shuffler]
+    #shuffler = np.random.permutation(len(X)) # you do not need shuffling for perceptron
+    #Y = Y[shuffler]
+    #X = X[shuffler]
     for x in range(len(X)):
         if ((Y[x] * np.dot(X[x], theta)) <= 0):
             theta += np.multiply(Y[x], X[x])
