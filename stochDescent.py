@@ -18,7 +18,7 @@ theta = np.array([0,0]).astype(np.float32)
 k = 0
 eta = 0.5
 deltaTheta = 10
-while (np.linalg.norm(deltaTheta) > 0.2):
+while (k < 1000 and np.linalg.norm(deltaTheta) > 0.1):
     shuffler = np.random.permutation(len(X)) 
     Y = Y[shuffler]
     X = X[shuffler]
